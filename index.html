@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo javascript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<h1>Commande chez tasty pas crousty</h1>
+<form  id="formulaire" onsubmit="return ajouterplat(event)">
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" required>
+    <label for="    telephone">Numéro de téléphone:</label>
+    <input type="text" id="telephone" name="telephone" required>
+    <label for="Adresse">Adresse postale:</label>
+    <input type="text" id="Adresse" name="Adresse" required>
+<select name="Ville" id="ville">
+    <option value="option0">Sélectionnez une ville</option>
+    <option value="option1">Paris</option>
+    <option value="option2">Lyon</option>
+    <option value="option3">Marseille</option>
+</select>
+<select id="plat">
+    <option value="0">Sélectionnez un plat</option>
+    <option value="8">Tasty goût eau de javel</option>
+    <option value="90">Tasty goût Adam De Masset</option>
+    <option value="12">Tasty goût cailloux</option>
+</select>
+<select id="supplement">
+        <option value="0">Sélectionnez un supplément</option>
+        <option value="3">Chiouaoua</option>
+    <option value="2">WD40</option>
+    <option value="2">Vannest</option>
+</select>
+<section>
+    <article>
+    <button type="submit">Commander</button>
+    </article>
+</section>
+<section id="recapitulatif">
+    <h3>Récapitulatif de votre commande:</h3>
+    <h2 id="commande"></h2>
+    <p id="prix"></p>
+    <p id="temps-livraison"></p>
+    <p id="heure-livraison"></p>
+</section>
+</form>
+</body>
+</html> 
