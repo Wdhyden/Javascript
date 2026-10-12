@@ -1,282 +1,168 @@
-/* =========================
-   STYLE GÉNÉRAL
-========================= */
-
 body {
     margin: 0;
     padding: 30px 15px;
     font-family: Arial, sans-serif;
-
     background: linear-gradient(135deg, #ff7b00, #ffb347);
-
     min-height: 100vh;
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-/* =========================
-   TITRE
-========================= */
-
 h1 {
     margin-bottom: 25px;
-
     color: white;
     text-align: center;
-
     font-size: 32px;
-
     text-transform: uppercase;
-
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-
-/* =========================
-   FORMULAIRE
-========================= */
-
 #formulaire {
     width: 420px;
-    max-width: 90%;
-
+    max-width: 100%;
     padding: 30px;
-
     background-color: white;
-
     border-radius: 20px;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-
     display: flex;
     flex-direction: column;
-
     box-sizing: border-box;
 }
 
-
-/* =========================
-   LABELS
-========================= */
-
 label {
     margin-bottom: 7px;
-
     color: #333;
-
     font-size: 15px;
     font-weight: bold;
 }
 
-
-/* =========================
-   CHAMPS DE TEXTE
-========================= */
-
-input[type="text"] {
+input[type="text"],
+input[type="tel"] {
     width: 100%;
     padding: 12px;
-
     margin-bottom: 18px;
-
     box-sizing: border-box;
-
     border: 2px solid #ddd;
     border-radius: 8px;
-
     font-size: 15px;
-
     outline: none;
-
     transition: 0.3s;
 }
 
-
-/* Champ sélectionné */
-
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="tel"]:focus {
     border-color: #ff7b00;
-
     box-shadow: 0 0 6px rgba(255, 123, 0, 0.4);
 }
-
-
-/* =========================
-   MENUS DÉROULANTS
-========================= */
 
 select {
     width: 100%;
-
     padding: 12px;
-
     margin-bottom: 18px;
-
     background-color: white;
-
     color: #333;
-
     border: 2px solid #ddd;
     border-radius: 8px;
-
     font-size: 15px;
-
     cursor: pointer;
-
     outline: none;
-
     transition: 0.3s;
 }
 
-
-/* Focus */
-
-select:focus {
-    border-color: #ff7b00;
-
-    box-shadow: 0 0 6px rgba(255, 123, 0, 0.4);
-}
-
-
-/* Survol */
-
+select:focus,
 select:hover {
     border-color: #ff7b00;
 }
 
-
-/* =========================
-   BOUTON
-========================= */
-
-section {
+button[type="submit"] {
     width: 100%;
-}
-
-
-/* Zone du bouton */
-
-section article {
-    width: 100%;
-}
-
-
-/* Bouton Commander */
-
-#commander {
-    width: 100%;
-
     padding: 14px;
-
     border: none;
     border-radius: 10px;
-
     background-color: #ff7b00;
-
     color: white;
-
     font-size: 17px;
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
-
-/* Survol du bouton */
-
-#commander:hover {
+button[type="submit"]:hover {
     background-color: #e66d00;
-
     transform: translateY(-2px);
-
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Quand on clique */
-
-#commander:active {
+button[type="submit"]:active {
     transform: translateY(0);
 }
 
-
-/* =========================
-   RÉCAPITULATIF
-========================= */
-
-#recapitulatif {
+#recapitulatif,
+#liste-commandes {
+    width: 420px;
+    max-width: 100%;
     margin-top: 25px;
-
     padding: 20px;
-
-    background-color: #fff3e6;
-
+    background-color: white;
     border-radius: 12px;
-
     border-left: 5px solid #ff7b00;
-
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
 }
 
-
-/* Titre du récapitulatif */
-
-#recapitulatif h3 {
+#recapitulatif h3,
+#liste-commandes h3 {
     margin-top: 0;
     margin-bottom: 15px;
-
     color: #333;
-
     font-size: 19px;
 }
 
-
-/* Commande */
-
 #commande {
     margin: 10px 0;
-
     color: #444;
-
     font-size: 16px;
     white-space: pre-line;
 }
 
-
-/* Prix */
-
 #prix {
     font-size: 18px;
     font-weight: bold;
-
     color: #ff7b00;
 }
-
-
-/* Temps de livraison */
 
 #temps-livraison,
 #heure-livraison {
     margin: 8px 0;
-
     color: #555;
-
     font-size: 15px;
 }
 
+#liste-commandes article {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fff3e6;
+    border-radius: 10px;
+    border-left: 4px solid #ff7b00;
+    overflow-wrap: anywhere;
+}
 
-/* =========================
-   RESPONSIVE
-========================= */
+#liste-commandes article h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #e66d00;
+    font-size: 17px;
+}
+
+#liste-commandes article p {
+    margin: 7px 0;
+    color: #444;
+    font-size: 14px;
+}
 
 @media (max-width: 500px) {
-
     body {
         padding: 20px 10px;
     }
@@ -286,11 +172,11 @@ section article {
     }
 
     #formulaire {
-        width: 95%;
         padding: 20px;
     }
 
-    #recapitulatif {
+    #recapitulatif,
+    #liste-commandes {
         padding: 15px;
     }
 }
